@@ -33,15 +33,16 @@ class Twitter extends Component {
     }
 
     remove = (tweetId) => {
-        const filterdTweetList = this.state.tweetList.filter(tweetItem => {
+        const filteredTweetList = this.state.tweetList.filter(tweetItem => {
             return tweetItem.id !== tweetId
         })
-        this.setState({ tweetList: filterdTweetList })
+        this.setState({ tweetList: filteredTweetList })
     }
 
     render() {
         return (
             <div>
+                <h2>Simple twitter</h2>
                 <form className="tweet-form" onSubmit={this.addTweet}>
                     <input
                         className="form-control"
